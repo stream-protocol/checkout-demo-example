@@ -4,4 +4,4 @@ This is a base demo app which can be used as quickstart reference to implement C
 
 For more details, head over to [Docs](https://streampay-doc.vercel.app/) and [Quickstart](https://streampay-doc.vercel.app/checkout/quickstart.html)
 
-Demo URL: https://checkout-demo-example-5781.vercel.app/
+[App Demo](https://checkout-demo-example-5781.vercel.app/)

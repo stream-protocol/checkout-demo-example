@@ -15,7 +15,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
       const response = await sdk.session.create({
         success_url: "http://localhost:3000/success",
         cancel_url: "http://localhost:3000/cancel",
-        tokens: ["dust", "str", "samo", "shdw"], // SOL, STR and USDC are default tokens and rest whitelisted tokens are optional to add and remove
+        tokens: ["dust", "samo", "shdw"], // SOL and USDC are default tokens and rest whitelisted tokens are optional to add and remove
         items: [
           {
             name: "Elon's Tweet folder",

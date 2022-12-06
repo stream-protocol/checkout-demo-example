@@ -1,4 +1,4 @@
-import { useCheckout } from "@streampay/react-checkout-sdk";
+import { useCheckout } from "@candypay/react-checkout-sdk";
 import axios from "axios";
 import type { NextPage } from "next";
 
@@ -11,7 +11,7 @@ const Index: NextPage = () => {
   const { mutate, isLoading } = useCheckout(fetchSessionId);
 
   // Example showcasing react hooks to generate the session url, alternatively you can use ur pre-built button.
-  // More details here- https://docs.streampayment.app/checkout/getting-started.html#integrating-the-checkout-button
+  // More details here- https://docs.candypay.fun/checkout/getting-started.html#integrating-the-checkout-button
 
   return (
     <div className="min-h-screen w-full bg-slate-100 flex items-center justify-center">

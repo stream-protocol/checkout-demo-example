@@ -1,8 +1,8 @@
-import { StreamPay } from "@streampay/checkout-sdk";
+import { CandyPay } from "@candypay/checkout-sdk";
 import { NextApiRequest, NextApiResponse } from "next";
 
-const sdk = new StreamPay({
-  api_key: process.env.STREAMPAY_PRIVATE_API_KEY!,
+const sdk = new CandyPay({
+  api_key: process.env.CANDYPAY_PRIVATE_API_KEY!,
   network: "mainnet",
   config: {
     collect_shipping_address: false,
@@ -13,9 +13,9 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method === "POST") {
     try {
       const response = await sdk.session.create({
-        success_url: "http://commerce.streampayment.app/success",
-        cancel_url: "http://commerce.streampayment.app/cancel",
-        tokens: ["dust", "samo", "str", "shdw"], // SOL, STR and USDC are default tokens and rest whitelisted tokens are optional to add and remove
+        success_url: "http://localhost:3000/success",
+        cancel_url: "http://localhost:3000/cancel",
+        tokens: ["dust", "str", "samo", "shdw"], // SOL, STR and USDC are default tokens and rest whitelisted tokens are optional to add and remove
         items: [
           {
             name: "Elon's Tweet folder",
